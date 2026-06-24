@@ -31,17 +31,6 @@ pipeline {
 
             steps {
                     sh 'npx playwright test'
-
-                script {
-            
-                    // if(params.All_Test) {
-                    //     sh 'npx playwright test'
-                    //     echo "Test reussi !"
-                    // } else {
-                    //     sh 'npx playwright test --grep '+ params.Navigateur + ' --project='+  params.Tags
-                    //     echo "Test reussi !"
-                    // }
-                }
             }
         }
     }
