@@ -24,7 +24,6 @@ pipeline {
         stage('Installation des dependances') {
             steps {
                 sh 'npm install'
-                sh 'npx install playwright'
             }
         }
 
