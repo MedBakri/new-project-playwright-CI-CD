@@ -1,7 +1,7 @@
 import {expect, test } from '@playwright/test'
 
 
-test("US-03 : Modification du profil entreprise", async function ({page}){
+test("US-03 : Modification du profil entreprise", {tag: '@Valid'}, async function ({page}){
     await page.goto("https://thrundrz.fr/gestion/")
     
     // cliquer sur la bouton creer un compt

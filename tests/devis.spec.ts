@@ -1,6 +1,6 @@
 import {test, expect} from "@playwright/test";
 
-test("US-05 : Création d'un devis ", async ({page}) => {
+test("US-05 : Création d'un devis ", {tag: '@Valid'}, async ({page}) => {
     // Visiter la 1ère page ...
     await page.goto("https://thrundrz.fr/gestion/")
     
@@ -45,8 +45,6 @@ test("US-05 : Création d'un devis ", async ({page}) => {
 
     expect((await page.locator("table tbody tr td").nth(6)
     .innerText()).split("€")[0].trim().split(".")[0]).toEqual(String(prix_produit1*random_qte1));
-
-
     
 })
 

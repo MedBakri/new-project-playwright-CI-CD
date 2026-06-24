@@ -1,7 +1,7 @@
 import {expect, test } from '@playwright/test'
 
 
-test("US-04 : Création d'un client", async function ({page}){
+test("US-04 : Création d'un client", {tag: '@Smoke'}, async function ({page}){
     await page.goto("https://thrundrz.fr/gestion/")
     
     // cliquer sur la bouton creer un compt
@@ -22,6 +22,6 @@ test("US-04 : Création d'un client", async function ({page}){
     await page.getByRole("textbox", {name:"Nom de l'entreprise"}).fill("Entreprise 1")
     await page.getByRole("button", {name:"Ajouter le client"}).click()
     
- await expect(page.locator("[role='alert']",{hasText:"Client ajouté avec succès !"})).toBeVisible()
+    await expect(page.locator("[role='alert']",{hasText:"Client ajouté avec succès !"})).toBeVisible()
     
 })
